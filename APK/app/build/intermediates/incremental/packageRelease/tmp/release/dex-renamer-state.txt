@@ -1,0 +1,4 @@
+#Wed Feb 02 16:51:59 CET 2022
+base.0=C\:\\Users\\thoma\\Documents\\0 - Travail\\Urbanature\\APK\\app\\build\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

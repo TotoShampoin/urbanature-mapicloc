@@ -1,0 +1,43 @@
+{
+  "packageId": "fr.totoshampoin.dummy.twa",
+  "host": "dummy.totoshampoin.fr",
+  "name": "Map-Picture-Location App",
+  "launcherName": "Mapicloc",
+  "display": "standalone",
+  "themeColor": "#0088FF",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#BBDDFF",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://dummy.totoshampoin.fr/icon/icon512.png",
+  "maskableIconUrl": "https://dummy.totoshampoin.fr/icon/icon512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "C:\\Users\\thoma\\Documents\\0 - Travail\\Urbanature\\APK\\android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "1",
+  "appVersionCode": 1,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://dummy.totoshampoin.fr/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {
+    "locationDelegation": {
+      "enabled": true
+    }
+  },
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "orientation": "portrait",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "appVersion": "1"
+}

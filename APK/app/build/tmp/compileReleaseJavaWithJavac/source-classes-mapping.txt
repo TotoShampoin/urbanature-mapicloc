@@ -1,0 +1,8 @@
+fr/totoshampoin/dummy/twa/Application.java
+ fr.totoshampoin.dummy.twa.Application
+fr/totoshampoin/dummy/twa/LauncherActivity.java
+ fr.totoshampoin.dummy.twa.LauncherActivity
+fr/totoshampoin/dummy/twa/DelegationService.java
+ fr.totoshampoin.dummy.twa.DelegationService
+fr/totoshampoin/dummy/twa/BuildConfig.java
+ fr.totoshampoin.dummy.twa.BuildConfig

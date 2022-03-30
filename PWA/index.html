@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0088FF">
+    <title>Mapicloc</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+    <!-- My script -->
+    <script src="./js/main.js" type="module"></script>
+    
+    <link rel="shortcut icon" href="icon/icon.svg">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="icon/iconApple.png">
+</head>
+<body>
+    <header>
+        <h1>Map Picture Location</h1>
+    </header>
+    <main>
+        <section id="location">
+            <h2>Location</h2>
+            <div class="varlist">
+                <div class="var" data-var="latitude">
+                    <div class="var__name">Latitude</div>
+                    <var class="var__val">0.0</var>
+                </div>
+                <div class="var" data-var="longitude">
+                    <div class="var__name">Longitude</div>
+                    <var class="var__val">0.0</var>
+                </div>
+            </div>
+        </section>
+        <section id="map">
+            <h2>Map</h2>
+            <div id="map-zone"></div>
+        </section>
+        <section id="picture">
+            <h2>Pictures</h2>
+            <input type="file" accept="image/*" multiple id="input-pic" hidden>
+            <label for="input-pic" class="picture__button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--color)"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18 20H4V6h9V4H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-9h-2v9zm-7.79-3.17l-1.96-2.36L5.5 18h11l-3.54-4.71zM20 4V1h-2v3h-3c.01.01 0 2 0 2h3v2.99c.01.01 2 0 2 0V6h3V4h-3z"/></svg>
+            </label>
+            <main class="picture__content"></main>
+        </section>
+    </main>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(console.log)
+                    .catch(console.error);
+            });
+        } else {
+            console.error("Service Worker is not supported");
+        }
+    </script>
+</body>
+</html>
